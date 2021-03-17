@@ -40,7 +40,21 @@ var studenti = [
 
 // 4. stampo nome e cognome degli Studenti
 for (var i = 0; i < studenti.length; i++) {
-  console.log( studenti[i].nome + " " + studenti[i].cognome );
+  console.log(studenti[i].nome + " " + studenti[i].cognome);
 }
+
+// 5. chiedo all'utente di inserire un nuovo studente
+var nuovoNome = prompt("Inserisci il nome dello studente");
+var nuovoCognome = prompt("Inserisci il cognome dello studente");
+var nuovaEta = parseInt(prompt("Inserisci l'età dello studente"));
+var nuovoStudente = {
+  nome: nuovoNome,
+  cognome: nuovoCognome,
+  eta: nuovaEta,
+};
+
+// 6. pusho i dati del nuovo studente nell'array studenti
+studenti.push(nuovoStudente);
+console.log(studenti);
 
 });
