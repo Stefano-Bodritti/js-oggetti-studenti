@@ -46,10 +46,14 @@ for (var i = 0; i < studenti.length; i++) {
 // 5. chiedo all'utente di inserire un nuovo studente
 var nuovoNome = prompt("Inserisci il nome dello studente");
 var nuovoCognome = prompt("Inserisci il cognome dello studente");
-var nuovaEta = parseInt(prompt("Inserisci l'età dello studente"));
+var nuovaEta;
+do {
+  nuovaEta = parseInt(prompt("Inserisci l'età dello studente"));
+} while ( isNaN(nuovaEta) );
+
 var nuovoStudente = {
-  nome: nuovoNome,
-  cognome: nuovoCognome,
+  nome: nuovoNome[0].toUpperCase() + nuovoNome.slice(1).toLowerCase(),
+  cognome: nuovoCognome[0].toUpperCase() + nuovoCognome.slice(1).toLowerCase(),
   eta: nuovaEta,
 };
 
