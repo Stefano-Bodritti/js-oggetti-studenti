@@ -51,11 +51,15 @@ do {
   nuovaEta = parseInt(prompt("Inserisci l'età dello studente"));
 } while ( isNaN(nuovaEta) );
 
-var nuovoStudente = {
-  nome: nuovoNome[0].toUpperCase() + nuovoNome.slice(1).toLowerCase(),
-  cognome: nuovoCognome[0].toUpperCase() + nuovoCognome.slice(1).toLowerCase(),
-  eta: nuovaEta,
-};
+// var nuovoStudente = {
+//   nome: nuovoNome[0].toUpperCase() + nuovoNome.slice(1).toLowerCase(),
+//   cognome: nuovoCognome[0].toUpperCase() + nuovoCognome.slice(1).toLowerCase(),
+//   eta: nuovaEta,
+// };
+var nuovoStudente = {};
+nuovoStudente.nome = nuovoNome[0].toUpperCase() + nuovoNome.slice(1).toLowerCase();
+nuovoStudente.cognome = nuovoCognome[0].toUpperCase() + nuovoCognome.slice(1).toLowerCase();
+nuovoStudente.eta = nuovaEta;
 
 // 6. pusho i dati del nuovo studente nell'array studenti
 studenti.push(nuovoStudente);
