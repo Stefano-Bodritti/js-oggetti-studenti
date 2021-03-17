@@ -8,15 +8,39 @@ Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo
 $(function () {
 
 // 1. creo oggetto con uno studente
-var studenti = {
+var studente = {
   nome: "Giangiulio",
   cognome: "Rossi",
   eta: 33,
 };
 
 // 2. stampo tutte le proprietà con ciclo for in
-for (var key in studenti) {
-  console.log(key + ": " + studenti[key]);
+for (var key in studente) {
+  console.log(key + ": " + studente[key]);
+}
+
+// 3. creo array di oggetti di Studenti
+var studenti = [
+  {
+    nome: "Giangiulio",
+    cognome: "Rossi",
+    eta: 33,
+  },
+  {
+    nome: "Riccardo",
+    cognome: "Verdi",
+    eta: 26,
+  },
+  {
+    nome: "Regina",
+    cognome: "Elisabetta",
+    eta: 111,
+  }
+];
+
+// 4. stampo nome e cognome degli Studenti
+for (var i = 0; i < studenti.length; i++) {
+  console.log( studenti[i].nome + " " + studenti[i].cognome );
 }
 
 });
