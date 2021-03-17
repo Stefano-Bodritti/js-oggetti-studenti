@@ -7,7 +7,16 @@ Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo
 
 $(function () {
 
+// 1. creo oggetto con uno studente
+var studenti = {
+  nome: "Giangiulio",
+  cognome: "Rossi",
+  eta: 33,
+};
 
-
+// 2. stampo tutte le proprietà con ciclo for in
+for (var key in studenti) {
+  console.log(key + ": " + studenti[key]);
+}
 
 });
